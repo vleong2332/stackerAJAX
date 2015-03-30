@@ -6,9 +6,12 @@
 	<link rel="stylesheet" href="main.css">
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="app.js"></script>
+	<script src="app2.js"></script>
 </head>
 <body>
+	<!-- MAIN CONTENT -->
 	<div class="container">
+
 		<div class="intro">
 			<div class="left stack-image"></div>
 			<div class="explanation">
@@ -17,26 +20,33 @@
 				<p>Sometimes, you also need some inspiration. This page also lets you search for the top answerers for a tag. If you want to rise to the top ranks for a topic, see how many reputation points you'll need to aim for!</p>
 			</div>
 		</div>
+
 		<hr>
+
 		<div class="stack">	
 			<h3>Get Unanswered Questions</h3>
 			<p>Find unanswered questions by tag. For multiple tags, use a semi-colon to separate.</p>
 			<form class="unanswered-getter" onsubmit="return false;">
-				<input type="text" placeholder='e.g., "HTML" or "HTML;CSS"' name="tags" size="30" autofocus required>
+				<input type="text" name="tags" size="30" placeholder='e.g., "HTML" or "HTML;CSS"' autofocus required>
 				<input type="submit" value="Submit">
 			</form>
 			<h3>View the Top Answerers for a Tag</h3>
 			<form class="inspiration-getter" onsubmit="return false;">
-				<input type="text" placeholder="e.g., jQuery" name="answerers" size="30"  required>
+				<input type="text" name="answerers" size="30" placeholder="e.g., jQuery" required>
 				<input type="submit" value="Submit">
 			</form>
 		</div>
+
 		<div class="results-container">
 			<div class="search-results"></div>
 			<div class="results"></div>
 		</div>
 	</div>
+
+
+	<!-- HIDDEN TEMPLATES -->
 	<div class="templates hidden">
+		<!-- Unanswered questions template -->
 		<dl class="result question">
 			<dt>Question</dt>
 				<dd class="question-text"><a href="" target="_blank"></a></dd>
@@ -47,9 +57,21 @@
 			<dt>Asker</dt>
 				<dd class="asker"></dd>
 		</dl>
+		<!-- Top answerers template -->
+		<dl class="result answerer">
+			<dt class="profile_image"><img src="" /></dt>
+				<dd class="display_name"><a href="" target="_blank"></a></dd>
+			<dt>Post Count</dt>
+				<dd class="post_count"></dd>
+			<dt>Reputation</dt>
+				<dd class="reputation"></dd>
+		</dl>
+		<!-- Error message template -->
 		<div class="error">
 			<p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
 		</div>
 	</div>
+
+
 </body>
 </html>

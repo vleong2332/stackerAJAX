@@ -44,3 +44,10 @@
 	background-color: #F78181;
 	padding: 1em;
 }
+.profile_image {
+	display: inline-block;
+}
+.display_name {
+	display: inline-block;
+	-webkit-margin-start: 5px;
+}
